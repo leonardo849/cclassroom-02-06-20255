@@ -37,12 +37,7 @@ def retorneCedulas(value):
     print(notas, valorDescontado)
 
     while valorDescontado >= 2:
-        if (valorDescontado % 10 == 6 or valorDescontado % 10 == 8) and valorDescontado <= 8:
-            quantidade = divideEPreparaOValor(valorDescontado, 2)
-            nota = classes.Nota(2, quantidade)
-            notas.append(nota)
-            valorDescontado -= quantidade * 2
-        elif valorDescontado >= 2 and valorDescontado < 5:
+        if ((valorDescontado % 10 == 6 or valorDescontado % 10 == 8) and valorDescontado <= 8) or valorDescontado >= 2 and valorDescontado < 5:
             quantidade = divideEPreparaOValor(valorDescontado, 2)
             nota = classes.Nota(2, quantidade)
             notas.append(nota)
